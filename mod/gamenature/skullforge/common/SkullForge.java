@@ -1,5 +1,6 @@
 package mod.gamenature.skullforge.common;
 
+import mod.gamenature.skullforge.update.ConnectionHandler;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -12,6 +13,7 @@ import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.network.NetworkMod;
+import cpw.mods.fml.common.network.NetworkRegistry;
 import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.common.registry.LanguageRegistry;
 
@@ -55,6 +57,9 @@ public class SkullForge {
 	
 	@EventHandler
 	public void init(FMLInitializationEvent event) {
+		
+		//Register our Connection Handler please!
+		NetworkRegistry.instance().registerConnectionHandler(new ConnectionHandler());
 
 		// Construct our items
 		hotbones = (new itemHotBones(4005)).setUnlocalizedName("skullforge:HotBones").func_111206_d("HotBones");
