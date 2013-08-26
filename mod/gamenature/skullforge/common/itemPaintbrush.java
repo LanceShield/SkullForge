@@ -35,6 +35,7 @@ public class itemPaintbrush extends Item {
 	@Override
     public boolean onItemUse(ItemStack par1ItemStack, EntityPlayer par2EntityPlayer, World par3World, int par4, int par5, int par6, int par7, float par8, float par9, float par10)
     {
+		
         if (!par2EntityPlayer.canPlayerEdit(par4, par5, par6, par7, par1ItemStack))
         {
             // If we can't edit this block for some reason, get out
@@ -105,7 +106,7 @@ public class itemPaintbrush extends Item {
 					        }
 
 	                    }
-	                    
+	            		par2EntityPlayer.worldObj.playSoundAtEntity(par2EntityPlayer, "skullforge:paint", 0.5F, 4.0F); 
 	                    return true;
                     }
                 }
@@ -113,5 +114,5 @@ public class itemPaintbrush extends Item {
         }
 		return false;
     }	
-
 }
+

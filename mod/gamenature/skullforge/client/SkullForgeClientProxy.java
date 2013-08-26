@@ -1,6 +1,7 @@
 package mod.gamenature.skullforge.client;
 
 import mod.gamenature.skullforge.common.SkullForgeCommonProxy;
+
 import net.minecraftforge.client.MinecraftForgeClient;
 
 public class SkullForgeClientProxy extends SkullForgeCommonProxy {
@@ -9,5 +10,4 @@ public class SkullForgeClientProxy extends SkullForgeCommonProxy {
 	public void registerRenderThings(){
 
 	}
-		
 }

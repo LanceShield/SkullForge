@@ -93,7 +93,7 @@ public class itemPaintScraper extends Item {
 					        }
 
 	                    }
-	                    
+	                    par2EntityPlayer.worldObj.playSoundAtEntity(par2EntityPlayer, "skullforge:remove", 0.5F, 4.0F); 
 	                    return true;
                     }
                 }

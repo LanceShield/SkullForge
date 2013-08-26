@@ -3,23 +3,26 @@ package mod.gamenature.skullforge.common;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraftforge.common.MinecraftForge;
 import cpw.mods.fml.common.Mod;
+import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.Mod.Init;
 import cpw.mods.fml.common.Mod.Instance;
 import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
+import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.network.NetworkMod;
 import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.common.registry.LanguageRegistry;
 
 /*
- * Mod created by Entropimus, based on a mod by MuscleMan1234
+ * Mod created by Entropimus, based on a mod by WeFightCreepers
  * http://www.minecraftforum.net/topic/1572189-145-craftable-mob-headsskulls-v11/
  * Please report bugs on this forum thread
  */
 
-@Mod(modid = "skullmod", name = "SkullForge", version = SkullForge.version)
-@NetworkMod(clientSideRequired = true, serverSideRequired = false, versionBounds = "[V1.6.2]")
+@Mod(modid = "skullforge", name = "SkullForge", version = SkullForge.version)
+@NetworkMod(clientSideRequired = true, serverSideRequired = false)
 
 public class SkullForge {
 	
@@ -28,10 +31,10 @@ public class SkullForge {
 	public static SkullForge instance;
 	
 	// Proxy defs
-	@SidedProxy(clientSide="net.gamenature.skullforge.client.SkullForgeClientProxy", serverSide="net.gamenature.skullforge.common.SkullForgeCommonProxy")
+	@SidedProxy(clientSide="mod.gamenature.skullforge.client.SkullForgeClientProxy", serverSide="mod.gamenature.skullforge.common.SkullForgeCommonProxy")
 	public static SkullForgeCommonProxy proxy;
 	
-	//Version Declare
+	//Version String
 	public static final String version = "V1.6.2B";
 	
 	// Item declarations
@@ -41,7 +44,16 @@ public class SkullForge {
 	public static Item paintbrush;
 	public static Item paintscraper;
 	
-	@Init
+	
+	@EventHandler
+	public static void preInit( FMLPreInitializationEvent event ) {
+		
+		//Sound Loader
+		MinecraftForge.EVENT_BUS.register(new SoundManager());
+
+	}
+	
+	@EventHandler
 	public void init(FMLInitializationEvent event) {
 
 		// Construct our items
