@@ -62,11 +62,11 @@ public class SkullForge {
 		NetworkRegistry.instance().registerConnectionHandler(new ConnectionHandler());
 
 		// Construct our items
-		hotbones = (new itemHotBones(4005)).setUnlocalizedName("skullforge:HotBones").func_111206_d("HotBones");
-		witherbones = (new itemWitherBones(4003)).setUnlocalizedName("skullforge:WitherBones").func_111206_d("WitherBones");
-		rehydratedmeat = (new itemWaterMeat(4004, 4, false)).setUnlocalizedName("skullforge:RehydratedMeat").func_111206_d("RehydratedMeat");
-		paintbrush = (new itemPaintbrush(4006)).setUnlocalizedName("skullforge:pb").func_111206_d("pb");
-		paintscraper = (new itemPaintScraper(4007)).setUnlocalizedName("skullforge:MyPaintScraper").func_111206_d("MyPaintScrapper");
+		hotbones = (new itemHotBones(4005)).setUnlocalizedName("skullforge:HotBones").setTextureName("HotBones");
+		witherbones = (new itemWitherBones(4003)).setUnlocalizedName("skullforge:WitherBones").setTextureName("WitherBones");
+		rehydratedmeat = (new itemWaterMeat(4004, 4, false)).setUnlocalizedName("skullforge:RehydratedMeat").setTextureName("RehydratedMeat");
+		paintbrush = (new itemPaintbrush(4006)).setUnlocalizedName("skullforge:pb").setTextureName("pb");
+		paintscraper = (new itemPaintScraper(4007)).setUnlocalizedName("skullforge:MyPaintScraper").setTextureName("MyPaintScrapper");
 
 		// Add the recipes
 		// Smelting recipe for bones into hot bones

@@ -25,16 +25,16 @@ public class ConnectionHandler implements IConnectionHandler {
 	public void playerLoggedIn(Player player, NetHandler netHandler, INetworkManager manager) {
 		try {
 			if (UpdateCheck.isUpdateAvailable()) {
-				netHandler.getPlayer().sendChatToPlayer(ChatMessageComponent.func_111066_d("["+EnumChatFormatting.GOLD +"SkullForge"+EnumChatFormatting.RESET+"] An Update is available for this mod. Check http://goo.gl/ya0VpP for more info. (Your Version: "+EnumChatFormatting.AQUA+SkullForge.version+EnumChatFormatting.RESET+")"));
+				netHandler.getPlayer().sendChatToPlayer(ChatMessageComponent.createFromText("["+EnumChatFormatting.GOLD +"SkullForge"+EnumChatFormatting.RESET+"] An Update is available for this mod. Check http://goo.gl/ya0VpP for more info. (Your Version: "+EnumChatFormatting.AQUA+SkullForge.version+EnumChatFormatting.RESET+")"));
 			}
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-			netHandler.getPlayer().sendChatToPlayer(ChatMessageComponent.func_111066_d("["+EnumChatFormatting.GOLD +"SkullForge"+EnumChatFormatting.RESET+"]"+EnumChatFormatting.RED+" Unable to contact the Update Server!"));
+			netHandler.getPlayer().sendChatToPlayer(ChatMessageComponent.createFromText("["+EnumChatFormatting.GOLD +"SkullForge"+EnumChatFormatting.RESET+"]"+EnumChatFormatting.RED+" Unable to contact the Update Server!"));
 		}
 		
 		
-		netHandler.getPlayer().sendChatToPlayer(ChatMessageComponent.func_111066_d("["+EnumChatFormatting.GOLD +"SkullForge"+EnumChatFormatting.RESET+"] Version "+EnumChatFormatting.AQUA+SkullForge.version+EnumChatFormatting.RESET+" loaded!"));
+		netHandler.getPlayer().sendChatToPlayer(ChatMessageComponent.createFromText("["+EnumChatFormatting.GOLD +"SkullForge"+EnumChatFormatting.RESET+"] Version "+EnumChatFormatting.AQUA+SkullForge.version+EnumChatFormatting.RESET+" loaded!"));
 	}
 	
 
