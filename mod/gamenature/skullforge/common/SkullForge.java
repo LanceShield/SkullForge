@@ -18,7 +18,7 @@ import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.common.registry.LanguageRegistry;
 
 /*
- * Mod created by Entropimus, based on a mod by WeFightCreepers
+ * Mod ported to Minecraft Forge by Entropimus, based on a mod by MuscleMan1234
  * http://www.minecraftforum.net/topic/1572189-145-craftable-mob-headsskulls-v11/
  * Please report bugs on this forum thread
  */
@@ -37,7 +37,7 @@ public class SkullForge {
 	public static SkullForgeCommonProxy proxy;
 
 	//Version String
-	public static final String version = "V1.6.2B";
+	public static final String version = "V1.6.4A";
 
 	// Item declarations
 	public static Item hotbones;
