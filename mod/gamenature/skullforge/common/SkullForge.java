@@ -1,5 +1,7 @@
 package mod.gamenature.skullforge.common;
 
+import com.mrcrayfish.furnitureapi.MineBayAPI;
+
 import mod.gamenature.skullforge.update.ConnectionHandler;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
@@ -68,6 +70,13 @@ public class SkullForge {
 		paintbrush = (new itemPaintbrush(4006)).setUnlocalizedName("skullforge:pb").setTextureName("pb");
 		paintscraper = (new itemPaintScraper(4007)).setUnlocalizedName("skullforge:MyPaintScraper").setTextureName("MyPaintScrapper");
 
+		//Add the Items to the MineBayAPI by MrCrayFish
+		MineBayAPI.addItemToMineBay(new ItemStack(hotbones, 5), 10);
+		MineBayAPI.addItemToMineBay(new ItemStack(witherbones, 3), 64);
+		MineBayAPI.addItemToMineBay(new ItemStack(rehydratedmeat, 5), 4);
+		MineBayAPI.addItemToMineBay(new ItemStack(paintbrush, 1), 30);
+		MineBayAPI.addItemToMineBay(new ItemStack(paintscraper, 1), 30);
+		
 		// Add the recipes
 		// Smelting recipe for bones into hot bones
 		GameRegistry.addSmelting(Item.bone.itemID, new ItemStack(SkullForge.hotbones,1), 1);
