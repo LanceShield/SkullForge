@@ -1,6 +1,6 @@
 package mod.gamenature.skullforge.common;
 
-import com.mrcrayfish.furnitureapi.MineBayAPI;
+import com.mrcrayfish.furniture.api.MineBayAPI;
 
 import mod.gamenature.skullforge.update.ConnectionHandler;
 import net.minecraft.block.Block;
@@ -39,7 +39,7 @@ public class SkullForge {
 	public static SkullForgeCommonProxy proxy;
 
 	//Version String
-	public static final String version = "V1.6.4A";
+	public static final String version = "V1.6.4B";
 
 	// Item declarations
 	public static Item hotbones;
