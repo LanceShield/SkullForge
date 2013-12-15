@@ -34,7 +34,8 @@ public class ConnectionHandler implements IConnectionHandler {
 		}
 		
 		
-		netHandler.getPlayer().sendChatToPlayer(ChatMessageComponent.createFromText("["+EnumChatFormatting.GOLD +"SkullForge"+EnumChatFormatting.RESET+"] Version "+EnumChatFormatting.AQUA+SkullForge.version+EnumChatFormatting.RESET+" loaded!"));
+		//Uncomment for testing purposes only kthxbye :D
+		//netHandler.getPlayer().sendChatToPlayer(ChatMessageComponent.createFromText("["+EnumChatFormatting.GOLD +"SkullForge"+EnumChatFormatting.RESET+"] Version "+EnumChatFormatting.AQUA+SkullForge.version+EnumChatFormatting.RESET+" loaded!"));
 	}
 	
 

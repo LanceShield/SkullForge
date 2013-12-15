@@ -39,7 +39,7 @@ public class SkullForge {
 	public static SkullForgeCommonProxy proxy;
 
 	//Version String
-	public static final String version = "V1.6.4B";
+	public static final String version = "1.6.4C";
 
 	// Item declarations
 	public static Item hotbones;
@@ -76,7 +76,7 @@ public class SkullForge {
 		MineBayAPI.addItemToMineBay(new ItemStack(rehydratedmeat, 5), 4);
 		MineBayAPI.addItemToMineBay(new ItemStack(paintbrush, 1), 30);
 		MineBayAPI.addItemToMineBay(new ItemStack(paintscraper, 1), 30);
-		
+
 		// Add the recipes
 		// Smelting recipe for bones into hot bones
 		GameRegistry.addSmelting(Item.bone.itemID, new ItemStack(SkullForge.hotbones,1), 1);
@@ -122,7 +122,7 @@ public class SkullForge {
 			"n",
 			'z', Item.silk, 'x', Item.stick, 'n', new ItemStack(Item.dyePowder, 1, 4)
 		});
-		
+
 		//Putty Knife
 		GameRegistry.addRecipe(new ItemStack(paintscraper), new Object[]{
 			"p",
@@ -135,7 +135,7 @@ public class SkullForge {
 		LanguageRegistry.addName(SkullForge.hotbones, "Heated Bone");
 		LanguageRegistry.addName(SkullForge.witherbones, "Wither Bone");
 		LanguageRegistry.addName(SkullForge.rehydratedmeat, "Rehydrated Flesh");
-		LanguageRegistry.addName(SkullForge.paintbrush, "Paintbrush");
+		LanguageRegistry.addName(SkullForge.paintbrush, "Paint Brush");
 		LanguageRegistry.addName(SkullForge.paintscraper, "Putty Knife");
 
 		// Register the images
