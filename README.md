@@ -1,3 +1,5 @@
+NOTICE: THIS MOD HAS BEEN DISCONTINUED. NO NEW BUGFIXES OR UPDATES WILL BE PUBLISHED FOR THIS MOD.
+
 ![alt text](https://dl.dropbox.com/u/101772327/Craftable%20Mob%20Heads/download/logo.png "Logo")
 
 * Current Public Version: V1.6.4B for Minecraft 1.6.4
